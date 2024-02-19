@@ -10,13 +10,15 @@ function editNav() {
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
+const termine = document.querySelector('.modalfinish')
+const form = document.querySelector('#form')
 const formData = document.querySelectorAll(".formData");
-const modalclose = document.querySelector('.close');
+const btnclose = document.querySelectorAll('.closeee');
 const modalbody = document.querySelector('.modal-body');
 const submit = document.querySelector('#submit')
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-modalclose.addEventListener('click', closemodal);
+// btnclose.addEventListener('click', closemodal);
 submit.addEventListener('click', launchModal);
 // launch modal form
 function launchModal() {
@@ -30,8 +32,12 @@ function isValidEmail(email) {
   return /\S+@\S+\.\S+/.test(email);
 }
 
-
-
+btnclose.forEach(function(button ) {
+  button.addEventListener('click', function(){
+    modalbg.style.display = "none";
+  });
+  
+})
 
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
@@ -106,11 +112,12 @@ document.getElementById("form").addEventListener("submit", function (event) {
   // Verifier pour le message de validation
   if (firstValue && lastValue && emailValue && !isNaN(quantityValue)
    && birthdateValue && isCheckboxChecked && isAnyLocationChecked) {
-    document.getElementById("Validation").style.display = "block";
+    form.classList.add('modal-body-finish')
+    termine.classList.add('openn')
     console.log("Affichage de errorMsg8");
   } else {
     console.log("Affichage de errorMsg8block");
-    document.getElementById("Validation").style.display = "none";
+    // document.getElementById("Validation").style.display = "none";
   }
 
 });
