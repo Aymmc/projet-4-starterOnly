@@ -33,6 +33,15 @@ function isValidEmail(email) {
 
 
 
+// function isValide(value){
+// if (value === true ){
+//   document.getElementById("errorMsg").style.display = "block"
+// } else {
+//   document.getElementById("errorMsg").style.display = "none";
+// }
+// }
+// }
+
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
   // Récupérer les valeurs des champs de formulaire
