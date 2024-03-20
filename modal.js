@@ -115,6 +115,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
     form.classList.add('modal-body-finish')
     termine.classList.add('openn')
     console.log("Affichage de errorMsg8");
+    console.log("Formulaire valide :", firstValue, lastValue, emailValue, birthdateValue);
   } else {
     console.log("Affichage de errorMsg8block");
     // document.getElementById("Validation").style.display = "none";
