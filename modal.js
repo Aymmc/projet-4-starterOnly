@@ -18,20 +18,18 @@ const modalbody = document.querySelector('.modal-body');
 const submit = document.querySelector('#submit')
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-// btnclose.addEventListener('click', closemodal);
+
 submit.addEventListener('click', launchModal);
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
 }
-// close modal 
-function closemodal() {
-  modalbg.style.display = "none";
-}// formulaire 
+
+// formulaire 
 function isValidEmail(email) {
   return /\S+@\S+\.\S+/.test(email);
 }
-
+// close modal 
 btnclose.forEach(function(button ) {
   button.addEventListener('click', function(){
     modalbg.style.display = "none";
@@ -114,11 +112,8 @@ document.getElementById("form").addEventListener("submit", function (event) {
    && birthdateValue && isCheckboxChecked && isAnyLocationChecked) {
     form.classList.add('modal-body-finish')
     termine.classList.add('openn')
-    console.log("Affichage de errorMsg8");
-    console.log("Formulaire valide :", firstValue, lastValue, emailValue, birthdateValue);
   } else {
-    console.log("Affichage de errorMsg8block");
-    // document.getElementById("Validation").style.display = "none";
+    console.log("Pas valide");
   }
 
 });

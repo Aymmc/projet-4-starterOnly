@@ -19,7 +19,6 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background-image: url("background.png");
   font-size: 18px;
   max-width: 1440px;
   margin: 0 auto;
@@ -691,14 +690,14 @@ line-height: 142.6%; /* 17.112px */
 
 }
 .modal-body{
-  margin: 0px auto;
+  margin: -11px auto;
 }
 }
  
 @keyframes modalopen {
   from {
     opacity: 0;
-    transform: translateY(-150px);
+    transform: translateY(-130px);
   }
 
   to {
